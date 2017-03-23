@@ -1,0 +1,19 @@
+{
+  "name": "ThienAnSpeakBot",
+  "version": "1.0.0",
+  "description": "Thien An Speak Bot, a TJBot recipe",
+  "main": "client/speak.js",
+  "scripts": {
+    "start": "node client/speak.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dnguyenv/speakbot.git"
+  },
+  "author": "Duy V Nguyen",
+  "dependencies": {
+    "ibmiotf": "^0.2.33",    
+    "watson-developer-cloud": "^2.2.0"
+  }
+}
