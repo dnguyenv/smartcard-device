@@ -43,13 +43,13 @@ deviceClient.on('error', function(argument) {
 });
 
 deviceClient.on("command", function(commandName, format, payload, topic) {
-    //var payloadStr = JSON.stringify(payload);
     console.log('payload: ', payload, ' and topic: ', topic);
     if (commandName === 'alert') {
-      if (payload == 'red'){
+      var jsonObj = JSON.parse(payload);
+      if (jsonObj.command == 'green'){
+        speak('Congrats ' + jsonObj.name +'  you are good to go');
+      }else{
         speak('Hey something goes wrong');
-      } else if (payload =='green') {
-        speak('Congrats, you are good to go');
       }
     } else {
         console.log("Command not supported.. " + commandName);
